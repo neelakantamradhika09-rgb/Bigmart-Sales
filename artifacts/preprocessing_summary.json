@@ -1,0 +1,48 @@
+{
+    "project": "BigMart Sales",
+    "raw_train_shape": [
+        8523,
+        12
+    ],
+    "raw_test_shape": [
+        5681,
+        11
+    ],
+    "processed_train_shape": [
+        8523,
+        33
+    ],
+    "processed_test_shape": [
+        5681,
+        32
+    ],
+    "target": "Item_Outlet_Sales",
+    "numerical_features": [
+        "Item_Weight",
+        "Item_Visibility",
+        "Item_MRP",
+        "Outlet_Establishment_Year"
+    ],
+    "categorical_features": [
+        "Item_Fat_Content",
+        "Item_Type",
+        "Outlet_Size",
+        "Outlet_Location_Type",
+        "Outlet_Type"
+    ],
+    "encoding": "OneHotEncoder",
+    "missing_value_handling": {
+        "Item_Weight": "Train median",
+        "Outlet_Size": "Train mode"
+    },
+    "train_test_separation": true,
+    "artifacts_generated": [
+        "corrupted_record.csv",
+        "datatype_mismatch.csv",
+        "invalid_categorical.csv",
+        "missing_attribute.csv",
+        "test_identifiers.csv",
+        "encoder.pkl",
+        "preprocessing_summary.json"
+    ]
+}

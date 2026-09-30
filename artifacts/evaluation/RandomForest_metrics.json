@@ -1,0 +1,8 @@
+{
+    "model": "RandomForestRegressor",
+    "n_estimators": 200,
+    "random_state": 42,
+    "training_mae": 298.1739317454296,
+    "training_rmse": 427.54301800998525,
+    "training_r2": 0.9382048925210615
+}

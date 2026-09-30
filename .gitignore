@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+
+mlruns/
+mlartifacts/
+
+artifacts/data/processed/*.npy
+artifacts/data/processed/*.pkl
+
+*.joblib
+*.log
+
+mlflow.db
+
+.DS_Store
+Thumbs.db

@@ -1,0 +1,71 @@
+{
+    "dataset_name": "test",
+    "file_path": "data/raw/Test.csv",
+    "validation_status": "PASSED",
+    "rows": 5681,
+    "columns": 11,
+    "missing_values": {
+        "Item_Weight": 976,
+        "Outlet_Size": 1606
+    },
+    "duplicate_rows": 0,
+    "missing_required_columns": [],
+    "extra_columns": [],
+    "data_types": {
+        "Item_Identifier": "str",
+        "Item_Weight": "float64",
+        "Item_Fat_Content": "str",
+        "Item_Visibility": "float64",
+        "Item_Type": "str",
+        "Item_MRP": "float64",
+        "Outlet_Identifier": "str",
+        "Outlet_Establishment_Year": "int64",
+        "Outlet_Size": "str",
+        "Outlet_Location_Type": "str",
+        "Outlet_Type": "str"
+    },
+    "categorical_values": {
+        "Item_Fat_Content": [
+            "Low Fat",
+            "reg",
+            "Regular",
+            "LF",
+            "low fat"
+        ],
+        "Item_Type": [
+            "Snack Foods",
+            "Dairy",
+            "Others",
+            "Fruits and Vegetables",
+            "Baking Goods",
+            "Health and Hygiene",
+            "Breads",
+            "Hard Drinks",
+            "Seafood",
+            "Soft Drinks",
+            "Household",
+            "Frozen Foods",
+            "Meat",
+            "Canned",
+            "Starchy Foods",
+            "Breakfast"
+        ],
+        "Outlet_Size": [
+            "Medium",
+            "Small",
+            "High"
+        ],
+        "Outlet_Location_Type": [
+            "Tier 1",
+            "Tier 2",
+            "Tier 3"
+        ],
+        "Outlet_Type": [
+            "Supermarket Type1",
+            "Grocery Store",
+            "Supermarket Type3",
+            "Supermarket Type2"
+        ]
+    },
+    "target_information": {}
+}

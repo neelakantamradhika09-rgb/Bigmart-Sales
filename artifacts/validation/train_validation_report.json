@@ -1,0 +1,78 @@
+{
+    "dataset_name": "train",
+    "file_path": "data/raw/Train.csv",
+    "validation_status": "PASSED",
+    "rows": 8523,
+    "columns": 12,
+    "missing_values": {
+        "Item_Weight": 1463,
+        "Outlet_Size": 2410
+    },
+    "duplicate_rows": 0,
+    "missing_required_columns": [],
+    "extra_columns": [],
+    "data_types": {
+        "Item_Identifier": "str",
+        "Item_Weight": "float64",
+        "Item_Fat_Content": "str",
+        "Item_Visibility": "float64",
+        "Item_Type": "str",
+        "Item_MRP": "float64",
+        "Outlet_Identifier": "str",
+        "Outlet_Establishment_Year": "int64",
+        "Outlet_Size": "str",
+        "Outlet_Location_Type": "str",
+        "Outlet_Type": "str",
+        "Item_Outlet_Sales": "float64"
+    },
+    "categorical_values": {
+        "Item_Fat_Content": [
+            "Low Fat",
+            "Regular",
+            "low fat",
+            "LF",
+            "reg"
+        ],
+        "Item_Type": [
+            "Dairy",
+            "Soft Drinks",
+            "Meat",
+            "Fruits and Vegetables",
+            "Household",
+            "Baking Goods",
+            "Snack Foods",
+            "Frozen Foods",
+            "Breakfast",
+            "Health and Hygiene",
+            "Hard Drinks",
+            "Canned",
+            "Breads",
+            "Starchy Foods",
+            "Others",
+            "Seafood"
+        ],
+        "Outlet_Size": [
+            "Medium",
+            "High",
+            "Small"
+        ],
+        "Outlet_Location_Type": [
+            "Tier 1",
+            "Tier 3",
+            "Tier 2"
+        ],
+        "Outlet_Type": [
+            "Supermarket Type1",
+            "Supermarket Type2",
+            "Grocery Store",
+            "Supermarket Type3"
+        ]
+    },
+    "target_information": {
+        "target_column": "Item_Outlet_Sales",
+        "missing_values": 0,
+        "minimum": 33.29,
+        "maximum": 13086.9648,
+        "mean": 2181.288913575032
+    }
+}

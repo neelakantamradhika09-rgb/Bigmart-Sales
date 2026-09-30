@@ -1,0 +1,80 @@
+{
+    "report_generated_at": "2026-09-30 13:12:26",
+    "model_name": "BigMart_Sales_RandomForest",
+    "total_versions": 6,
+    "latest_version": 6,
+    "registered_models": [
+        {
+            "version": 1,
+            "model_name": "BigMart_Sales_RandomForest",
+            "model_type": "RandomForestRegressor",
+            "model_file": "artifacts/models/production_model.pkl",
+            "metrics_file": "artifacts/evaluation/RandomForest_metrics.json",
+            "training_mae": 298.1739317454296,
+            "training_rmse": 427.54301800998525,
+            "training_r2": 0.9382048925210615,
+            "registered_at": "2026-09-30 12:00:30",
+            "status": "registered"
+        },
+        {
+            "version": 2,
+            "model_name": "BigMart_Sales_RandomForest",
+            "model_type": "RandomForestRegressor",
+            "model_file": "artifacts/models/production_model.pkl",
+            "metrics_file": "artifacts/evaluation/RandomForest_metrics.json",
+            "training_mae": 298.1739317454296,
+            "training_rmse": 427.54301800998525,
+            "training_r2": 0.9382048925210615,
+            "registered_at": "2026-09-30 12:06:41",
+            "status": "registered"
+        },
+        {
+            "version": 3,
+            "model_name": "BigMart_Sales_RandomForest",
+            "model_type": "RandomForestRegressor",
+            "model_file": "artifacts/models/production_model.pkl",
+            "metrics_file": "artifacts/evaluation/RandomForest_metrics.json",
+            "training_mae": 298.1739317454296,
+            "training_rmse": 427.54301800998525,
+            "training_r2": 0.9382048925210615,
+            "registered_at": "2026-09-30 12:56:39",
+            "status": "registered"
+        },
+        {
+            "version": 4,
+            "model_name": "BigMart_Sales_RandomForest",
+            "model_type": "RandomForestRegressor",
+            "model_file": "artifacts/models/production_model.pkl",
+            "metrics_file": "artifacts/evaluation/RandomForest_metrics.json",
+            "training_mae": 298.1739317454296,
+            "training_rmse": 427.54301800998525,
+            "training_r2": 0.9382048925210615,
+            "registered_at": "2026-09-30 12:57:07",
+            "status": "registered"
+        },
+        {
+            "version": 5,
+            "model_name": "BigMart_Sales_RandomForest",
+            "model_type": "RandomForestRegressor",
+            "model_file": "artifacts/models/production_model.pkl",
+            "metrics_file": "artifacts/evaluation/RandomForest_metrics.json",
+            "training_mae": 298.1739317454296,
+            "training_rmse": 427.54301800998525,
+            "training_r2": 0.9382048925210615,
+            "registered_at": "2026-09-30 13:11:47",
+            "status": "registered"
+        },
+        {
+            "version": 6,
+            "model_name": "BigMart_Sales_RandomForest",
+            "model_type": "RandomForestRegressor",
+            "model_file": "artifacts/models/production_model.pkl",
+            "metrics_file": "artifacts/evaluation/RandomForest_metrics.json",
+            "training_mae": 298.1739317454296,
+            "training_rmse": 427.54301800998525,
+            "training_r2": 0.9382048925210615,
+            "registered_at": "2026-09-30 13:12:26",
+            "status": "registered"
+        }
+    ]
+}
