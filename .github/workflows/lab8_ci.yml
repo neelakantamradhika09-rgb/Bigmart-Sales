@@ -1,0 +1,57 @@
+
+name: Lab 8 - BigMart Sales CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'src/**'
+      - 'data/**'
+      - 'config.yaml'
+      - 'requirements.txt'
+      - '.github/workflows/lab8_ci.yml'
+
+  pull_request:
+    branches:
+      - main
+      - master
+
+  workflow_dispatch:
+
+jobs:
+  bigmart-ml-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run BigMart ML Pipeline
+        run: |
+          python src/mlops_pipeline/bigmart_sales_pipeline.py
+
+      - name: Verify Pipeline Report
+        run: |
+          python -c "import json; r=json.load(open('reports/bigmart_sales_pipeline_run_log.json')); print('Pipeline Status:', r['pipeline_status']); assert r['pipeline_status'] == 'SUCCESS'"
+
+      - name: Upload Pipeline Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bigmart-sales-pipeline-reports
+          path: |
+            reports/
+            artifacts/
+          if-no-files-found: warn
