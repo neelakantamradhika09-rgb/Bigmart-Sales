@@ -1,0 +1,5 @@
+{
+    "total_predictions": 5681,
+    "output_file": "artifacts/predictions.csv",
+    "status": "SUCCESS"
+}

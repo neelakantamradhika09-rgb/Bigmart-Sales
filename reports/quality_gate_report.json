@@ -1,0 +1,6 @@
+{
+    "metric": "R2_Score",
+    "observed_value": 0.5988678541342625,
+    "minimum_value": 0.0,
+    "quality_gate": "PASSED"
+}

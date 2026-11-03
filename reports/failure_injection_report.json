@@ -1,0 +1,20 @@
+{
+    "total_tests": 3,
+    "results": [
+        {
+            "test": "Empty Dataset",
+            "status": "HANDLED",
+            "message": "Dataset is empty"
+        },
+        {
+            "test": "Missing Target",
+            "status": "HANDLED",
+            "message": "Target column missing"
+        },
+        {
+            "test": "Missing Values",
+            "status": "DETECTED",
+            "message": "Missing values detected"
+        }
+    ]
+}

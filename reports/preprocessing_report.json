@@ -1,0 +1,30 @@
+{
+    "numeric_features": [
+        "Item_Weight",
+        "Item_Visibility",
+        "Item_MRP",
+        "Outlet_Establishment_Year"
+    ],
+    "categorical_features": [
+        "Item_Identifier",
+        "Item_Fat_Content",
+        "Item_Type",
+        "Outlet_Identifier",
+        "Outlet_Size",
+        "Outlet_Location_Type",
+        "Outlet_Type"
+    ],
+    "train_shape": [
+        6818,
+        1600
+    ],
+    "validation_shape": [
+        1705,
+        1600
+    ],
+    "test_shape": [
+        5681,
+        1600
+    ],
+    "status": "SUCCESS"
+}

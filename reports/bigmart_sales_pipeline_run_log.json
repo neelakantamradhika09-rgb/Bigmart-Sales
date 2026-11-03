@@ -1,0 +1,108 @@
+{
+    "project": "BigMart Sales Prediction",
+    "pipeline_status": "SUCCESS",
+    "total_stages": 11,
+    "completed_stages": 11,
+    "execution_time": "2026-11-03T05:36:55.024641",
+    "stages": [
+        {
+            "stage": "01_load_data.py",
+            "status": "SUCCESS",
+            "start_time": "2026-11-03T05:36:33.481672",
+            "end_time": "2026-11-03T05:36:34.896849",
+            "return_code": 0,
+            "output": "BigMart Training Data Loaded\nBigMart Testing Data Loaded\nTraining Shape: (8523, 12)\nTesting Shape: (5681, 11)\nData Loading Completed Successfully\nTraining Dataset Loaded\nTesting Dataset Loaded\nTrain Shape: (8523, 12)\nTest Shape: (5681, 11)\nData Loading Completed\n",
+            "error": ""
+        },
+        {
+            "stage": "02_validate_data.py",
+            "status": "SUCCESS",
+            "start_time": "2026-11-03T05:36:34.897097",
+            "end_time": "2026-11-03T05:36:36.058986",
+            "return_code": 0,
+            "output": "Schema Validation PASSED\nData Validation Completed\n",
+            "error": ""
+        },
+        {
+            "stage": "03_preprocessing.py",
+            "status": "SUCCESS",
+            "start_time": "2026-11-03T05:36:36.059217",
+            "end_time": "2026-11-03T05:36:40.029247",
+            "return_code": 0,
+            "output": "Preprocessing Completed Successfully\nTraining Shape: (6818, 1600)\nValidation Shape: (1705, 1600)\nTest Shape: (5681, 1600)\n",
+            "error": ""
+        },
+        {
+            "stage": "04_validate_outputs.py",
+            "status": "SUCCESS",
+            "start_time": "2026-11-03T05:36:40.029688",
+            "end_time": "2026-11-03T05:36:41.917159",
+            "return_code": 0,
+            "output": "Processed Output Validation PASSED\n",
+            "error": ""
+        },
+        {
+            "stage": "05_train_registry.py",
+            "status": "SUCCESS",
+            "start_time": "2026-11-03T05:36:41.917357",
+            "end_time": "2026-11-03T05:36:47.392070",
+            "return_code": 0,
+            "output": "Model Training Completed\nModel Registered Successfully\n",
+            "error": ""
+        },
+        {
+            "stage": "06_model_evaluation.py",
+            "status": "SUCCESS",
+            "start_time": "2026-11-03T05:36:47.392318",
+            "end_time": "2026-11-03T05:36:50.350769",
+            "return_code": 0,
+            "output": "Model Evaluation Completed\nMAE: 729.1545564947505\nRMSE: 1044.1576342778935\nR2 Score: 0.5988678541342625\n",
+            "error": ""
+        },
+        {
+            "stage": "07_quality_gate.py",
+            "status": "SUCCESS",
+            "start_time": "2026-11-03T05:36:50.351020",
+            "end_time": "2026-11-03T05:36:50.467295",
+            "return_code": 0,
+            "output": "Quality Gate: PASSED\n",
+            "error": ""
+        },
+        {
+            "stage": "08_automate_lifecycle.py",
+            "status": "SUCCESS",
+            "start_time": "2026-11-03T05:36:50.467465",
+            "end_time": "2026-11-03T05:36:50.612831",
+            "return_code": 0,
+            "output": "Model Lifecycle: PROMOTED\n",
+            "error": ""
+        },
+        {
+            "stage": "09_inference.py",
+            "status": "SUCCESS",
+            "start_time": "2026-11-03T05:36:50.613167",
+            "end_time": "2026-11-03T05:36:53.603936",
+            "return_code": 0,
+            "output": "Inference Completed\nPredictions Saved Successfully\n",
+            "error": ""
+        },
+        {
+            "stage": "10_failure_injection.py",
+            "status": "SUCCESS",
+            "start_time": "2026-11-03T05:36:53.604302",
+            "end_time": "2026-11-03T05:36:54.554240",
+            "return_code": 0,
+            "output": "Failure Injection Testing Completed\n{'test': 'Empty Dataset', 'status': 'HANDLED', 'message': 'Dataset is empty'}\n{'test': 'Missing Target', 'status': 'HANDLED', 'message': 'Target column missing'}\n{'test': 'Missing Values', 'status': 'DETECTED', 'message': 'Missing values detected'}\n",
+            "error": ""
+        },
+        {
+            "stage": "validation.py",
+            "status": "SUCCESS",
+            "start_time": "2026-11-03T05:36:54.554493",
+            "end_time": "2026-11-03T05:36:55.024483",
+            "return_code": 0,
+            "output": "Final Validation: PASSED\n",
+            "error": ""
+        }
+    ]
+}

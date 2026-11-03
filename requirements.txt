@@ -1,10 +1,10 @@
+fastapi
+uvicorn[standard]
+pydantic
 pandas
 numpy
 scikit-learn
 joblib
-PyYAML
-mlflow
-matplotlib
-seaborn
-xgboost
+requests
+httpx
 pytest

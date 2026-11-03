@@ -1,0 +1,6 @@
+{
+    "train_rows": 8523,
+    "train_columns": 12,
+    "test_rows": 5681,
+    "test_columns": 11
+}

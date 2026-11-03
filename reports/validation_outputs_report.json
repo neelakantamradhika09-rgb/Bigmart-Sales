@@ -1,0 +1,13 @@
+{
+    "train_shape": [
+        6818,
+        1600
+    ],
+    "test_shape": [
+        5681,
+        1600
+    ],
+    "target_count": 6818,
+    "feature_count_match": true,
+    "target_count_match": true
+}

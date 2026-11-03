@@ -1,0 +1,14 @@
+{
+    "checks": {
+        "models/bigmart_model.pkl": true,
+        "models/preprocessor.pkl": true,
+        "data/processed/X_train.pkl": true,
+        "data/processed/X_test.pkl": true,
+        "data/processed/y_train.pkl": true,
+        "data/processed/X_val.pkl": true,
+        "data/processed/y_val.pkl": true,
+        "reports/evaluation_report.json": true,
+        "artifacts/predictions.csv": true
+    },
+    "status": "PASSED"
+}

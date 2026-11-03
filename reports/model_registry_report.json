@@ -1,0 +1,8 @@
+{
+    "model_name": "BigMart_RandomForest",
+    "model_version": "1.0",
+    "model_type": "RandomForestRegressor",
+    "training_date": "2026-11-03T22:52:00.137445",
+    "model_path": "models/bigmart_model.pkl",
+    "status": "REGISTERED"
+}

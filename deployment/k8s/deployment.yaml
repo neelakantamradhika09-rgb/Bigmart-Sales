@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: bigmart-sales-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: bigmart-sales
+
+  template:
+    metadata:
+      labels:
+        app: bigmart-sales
+
+    spec:
+      containers:
+        - name: bigmart-sales-api
+
+          image: bigmart-sales-api:lab11
+
+          imagePullPolicy: IfNotPresent
+
+          ports:
+            - containerPort: 8000
+
+          env:
+            - name: BIGMART_MODEL_PATH
+              value: /app/models/bigmart_model.pkl
+
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 20
+            periodSeconds: 15
+
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "1Gi"
