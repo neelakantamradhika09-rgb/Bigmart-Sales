@@ -1,0 +1,39 @@
+
+project:
+  name: BigMart Sales Prediction
+  problem_type: regression
+  target_column: Item_Outlet_Sales
+
+data:
+  train_path: data/raw/Train.csv
+  test_path: data/raw/Test.csv
+  processed_dir: data/processed
+
+model:
+  name: RandomForestRegressor
+  artifact_path: models/bigmart_model.pkl
+  preprocessor_path: models/preprocessor.pkl
+  random_state: 42
+  n_estimators: 100
+
+evaluation:
+  metrics:
+    - MAE
+    - MSE
+    - RMSE
+    - R2
+
+pipeline:
+  report_path: reports/bigmart_sales_pipeline_run_log.json
+  stages:
+    - 01_load_data.py
+    - 02_validate_data.py
+    - 03_preprocessing.py
+    - 04_validate_outputs.py
+    - 05_train_registry.py
+    - 06_model_evaluation.py
+    - 07_quality_gate.py
+    - 08_automate_lifecycle.py
+    - 09_inference.py
+    - 10_failure_injection.py
+    - validation.py
