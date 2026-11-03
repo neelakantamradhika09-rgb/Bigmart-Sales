@@ -1,0 +1,47 @@
+name: Lab 9 - BigMart Sales Failure Handling
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/simulate_data_corruption.py'
+      - 'data/raw/Train.csv'
+      - 'requirements.txt'
+      - '.github/workflows/lab9_failure_tests.yml'
+
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  failure-handling:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set Up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Failure Simulation
+        run: |
+          python src/simulate_data_corruption.py
+
+      - name: Upload Failure Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bigmart-failure-report
+          path: artifacts/failure_simulation_report.json
+          if-no-files-found: warn

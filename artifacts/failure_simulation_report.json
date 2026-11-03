@@ -1,0 +1,44 @@
+{
+    "experiment": "Experiment 9 - Failure Handling and Recovery",
+    "project": "BigMart Sales",
+    "total_scenarios": 5,
+    "passed": 5,
+    "failed": 0,
+    "results": [
+        {
+            "scenario": "Missing Data",
+            "expected": "HALT",
+            "actual": "HALT",
+            "status": "PASS",
+            "details": "Dataset contains no records"
+        },
+        {
+            "scenario": "Invalid Datatype",
+            "expected": "HALT",
+            "actual": "HALT",
+            "status": "PASS",
+            "details": "Unable to parse string 'INVALID_VALUE' at position 0"
+        },
+        {
+            "scenario": "Schema Mismatch",
+            "expected": "HALT",
+            "actual": "HALT",
+            "status": "PASS",
+            "details": "Missing columns: ['Item_Identifier']"
+        },
+        {
+            "scenario": "Preprocessing Error",
+            "expected": "HALT",
+            "actual": "HALT",
+            "status": "PASS",
+            "details": "Invalid value 'INVALID_WEIGHT' for dtype 'float64'"
+        },
+        {
+            "scenario": "Missing Model Artifact",
+            "expected": "RECOVERED",
+            "actual": "RECOVERED",
+            "status": "PASS",
+            "details": "Missing model detected and recovery action recorded"
+        }
+    ]
+}

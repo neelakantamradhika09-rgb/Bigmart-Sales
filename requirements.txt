@@ -1,9 +1,10 @@
-
 pandas
 numpy
 scikit-learn
 joblib
-pyyaml
+PyYAML
+mlflow
 matplotlib
 seaborn
-mlflow
+xgboost
+pytest
