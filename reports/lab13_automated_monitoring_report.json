@@ -1,0 +1,44 @@
+{
+  "stage": "13_automated_monitoring",
+  "status": "SUCCESS",
+  "timestamp": "2026-11-05T17:25:15.743530",
+  "project": "bigmart-sales",
+  "monitoring": {
+    "data_drift": false,
+    "prediction_drift": false,
+    "concept_drift": true,
+    "any_drift_detected": true
+  },
+  "recommended_action": "RETRAIN",
+  "pipeline_status": "RETRAIN_REQUIRED",
+  "executed_steps": [
+    {
+      "script": "12_data_drift.py",
+      "return_code": 0,
+      "status": "SUCCESS",
+      "stdout": "============================================================\nBIGMART DATA DRIFT DETECTION\n============================================================\n\nFeature drift results:\nItem_Weight: PSI=0.0063 NO_DRIFT\nItem_Visibility: PSI=0.0045 NO_DRIFT\nItem_MRP: PSI=0.0020 NO_DRIFT\nOutlet_Establishment_Year: PSI=0.0000 NO_DRIFT\n\nOverall drift detected: False\nReport saved to: C:\\Users\\neela\\Desktop\\Bigmart sales\\artifacts\\data_drift_report.json\n",
+      "stderr": ""
+    },
+    {
+      "script": "12_prediction_drift.py",
+      "return_code": 0,
+      "status": "SUCCESS",
+      "stdout": "============================================================\nBIGMART PREDICTION DRIFT DETECTION\n============================================================\nRecords monitored : 500\nMean prediction   : 2176.71\nMedian prediction : 2049.62\nP90 prediction    : 3898.37\nPrediction drift  : NO\n\nReport saved to: C:\\Users\\neela\\Desktop\\Bigmart sales\\artifacts\\prediction_drift_report.json\n",
+      "stderr": ""
+    },
+    {
+      "script": "12_concept_drift.py",
+      "return_code": 0,
+      "status": "SUCCESS",
+      "stdout": "{\n  \"baseline_metrics\": {\n    \"mae\": 626.8173067501474,\n    \"rmse\": 883.0178062832732,\n    \"r2\": 0.7322203980890893\n  },\n  \"current_metrics\": {\n    \"mae\": 743.7329182749504,\n    \"rmse\": 1114.0454933110157,\n    \"r2\": 0.7076116307862121\n  },\n  \"rmse_change_percent\": 26.163423362906506,\n  \"mae_change_percent\": 18.652262830931402,\n  \"threshold_percent\": 10,\n  \"concept_drift_detected\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "12_drift_analysis.py",
+      "return_code": 0,
+      "status": "SUCCESS",
+      "stdout": "{\n  \"data_drift\": false,\n  \"prediction_drift\": false,\n  \"concept_drift\": true,\n  \"any_drift_detected\": true,\n  \"recommended_action\": \"RETRAIN\"\n}\n",
+      "stderr": ""
+    }
+  ]
+}

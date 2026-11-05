@@ -5,12 +5,12 @@
     "r2": 0.7322203980890893
   },
   "current_metrics": {
-    "mae": 743.7329182749505,
+    "mae": 743.7329182749504,
     "rmse": 1114.0454933110157,
     "r2": 0.7076116307862121
   },
   "rmse_change_percent": 26.163423362906506,
-  "mae_change_percent": 18.65226283093142,
+  "mae_change_percent": 18.652262830931402,
   "threshold_percent": 10,
   "concept_drift_detected": true
 }

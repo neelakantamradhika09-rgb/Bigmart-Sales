@@ -1,10 +1,10 @@
 {
   "stage": "12_update_mlflow_registry",
   "status": "SUCCESS",
-  "run_id": "08c7349cd9e24ca6b41352d706af806e",
+  "run_id": "195d5907a276462296465a56f9835812",
   "registered_model": "BigMart_Sales_Production_Model",
-  "version": 1,
-  "model_uri": "models:/m-197e25185b23427f8f7ff0d3d7e8fd01",
+  "version": 3,
+  "model_uri": "models:/m-c87f083d23b946a4bc38afa6c6ca0350",
   "tracking_uri": "sqlite:///mlflow.db",
   "experiment_name": "BigMart_Sales_Monitoring",
   "metrics": {

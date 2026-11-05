@@ -1,0 +1,11 @@
+{
+  "stage": "13_automated_retraining",
+  "status": "SUCCESS",
+  "timestamp": "2026-11-05T17:26:53.215360",
+  "triggered_by": "concept_drift",
+  "recommended_action": "RETRAIN",
+  "retraining_script": "C:\\Users\\neela\\Desktop\\Bigmart sales\\src\\mlops_pipeline\\12_retrain_model.py",
+  "return_code": 0,
+  "stdout": "============================================================\nBIGMART MODEL RETRAINING\n============================================================\nTraining dataset shape: (8523, 12)\nNumerical features   : 4\nCategorical features : 7\nTraining rows       : 6818\nValidation rows     : 1705\nProcessed training shape   : (6818, 1600)\nProcessed validation shape : (1705, 1600)\n\nRetraining metrics:\nRMSE : 1027.7717\nMAE  : 718.5057\nR2   : 0.6114\n\n============================================================\nRETRAINING COMPLETED SUCCESSFULLY\n============================================================\nRMSE : 1027.7717\nMAE  : 718.5057\nR2   : 0.6114\nModel: C:\\Users\\neela\\Desktop\\Bigmart sales\\models\\retrained_bigmart_model.pkl\nPreprocessor: C:\\Users\\neela\\Desktop\\Bigmart sales\\models\\retrained_bigmart_preprocessor.pkl\nReport: C:\\Users\\neela\\Desktop\\Bigmart sales\\artifacts\\retraining_report.json\n",
+  "stderr": ""
+}

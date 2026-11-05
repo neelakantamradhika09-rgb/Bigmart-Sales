@@ -1,0 +1,91 @@
+name: Lab 13 - End-to-End MLOps Monitoring
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+    paths:
+      - "src/mlops_pipeline/**"
+      - "artifacts/**"
+      - "data/monitoring/**"
+      - "models/**"
+      - "reports/**"
+
+jobs:
+  lab13-monitoring:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Set PYTHONPATH
+        run: |
+          echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
+
+      - name: Verify Lab 12 monitoring scripts
+        run: |
+          test -f src/mlops_pipeline/12_data_drift.py
+          test -f src/mlops_pipeline/12_prediction_drift.py
+          test -f src/mlops_pipeline/12_concept_drift.py
+          test -f src/mlops_pipeline/12_drift_analysis.py
+          test -f src/mlops_pipeline/12_retrain_model.py
+          test -f src/mlops_pipeline/12_update_mlflow_registry.py
+
+      - name: Compile pipeline scripts
+        run: |
+          python -m py_compile src/mlops_pipeline/12_data_drift.py
+          python -m py_compile src/mlops_pipeline/12_prediction_drift.py
+          python -m py_compile src/mlops_pipeline/12_concept_drift.py
+          python -m py_compile src/mlops_pipeline/12_drift_analysis.py
+          python -m py_compile src/mlops_pipeline/12_retrain_model.py
+          python -m py_compile src/mlops_pipeline/12_update_mlflow_registry.py
+
+      - name: Run data drift monitoring
+        run: |
+          python src/mlops_pipeline/12_data_drift.py
+
+      - name: Run prediction drift monitoring
+        run: |
+          python src/mlops_pipeline/12_prediction_drift.py
+
+      - name: Run concept drift monitoring
+        run: |
+          python src/mlops_pipeline/12_concept_drift.py
+
+      - name: Run drift analysis
+        run: |
+          python src/mlops_pipeline/12_drift_analysis.py
+
+      - name: Run API performance monitoring
+        run: |
+          python src/mlops_pipeline/12_api_performance_monitoring.py
+
+      - name: Run performance monitoring
+        run: |
+          python src/mlops_pipeline/12_performance_monitoring.py
+
+      - name: Run prediction monitoring
+        run: |
+          python src/mlops_pipeline/12_prediction_monitoring.py
+
+      - name: Upload monitoring reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: bigmart-lab13-monitoring-reports
+          path: |
+            artifacts/*.json
+            reports/*.json

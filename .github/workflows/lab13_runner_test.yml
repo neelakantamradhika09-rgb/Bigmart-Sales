@@ -1,0 +1,54 @@
+name: Lab 13 Runner Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  runner-test:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Verify project structure
+        run: |
+          test -d src/mlops_pipeline
+          test -d artifacts
+          test -d data
+          test -d models
+          test -d reports
+          test -d deployment
+          test -d api
+
+      - name: Verify Lab 12 scripts
+        run: |
+          test -f src/mlops_pipeline/12_data_drift.py
+          test -f src/mlops_pipeline/12_prediction_drift.py
+          test -f src/mlops_pipeline/12_concept_drift.py
+          test -f src/mlops_pipeline/12_drift_analysis.py
+          test -f src/mlops_pipeline/12_retrain_model.py
+          test -f src/mlops_pipeline/12_update_mlflow_registry.py
+
+      - name: Compile scripts
+        run: |
+          python -m py_compile src/mlops_pipeline/12_data_drift.py
+          python -m py_compile src/mlops_pipeline/12_prediction_drift.py
+          python -m py_compile src/mlops_pipeline/12_concept_drift.py
+          python -m py_compile src/mlops_pipeline/12_drift_analysis.py
+          python -m py_compile src/mlops_pipeline/12_retrain_model.py
+          python -m py_compile src/mlops_pipeline/12_update_mlflow_registry.py
+
+      - name: Runner test passed
+        run: echo "Lab 13 runner test passed"
