@@ -1,0 +1,17 @@
+{
+  "stage": "12_model_comparison",
+  "status": "SUCCESS",
+  "records": 5681,
+  "old_model": {
+    "mean_prediction": 2169.8130693353055,
+    "std_prediction": 1344.6226631961445
+  },
+  "new_model": {
+    "mean_prediction": 708.597292304994,
+    "std_prediction": 246.852380431797
+  },
+  "prediction_difference": {
+    "mean_absolute_difference": 1481.618628143539,
+    "max_absolute_difference": 6222.337619918657
+  }
+}

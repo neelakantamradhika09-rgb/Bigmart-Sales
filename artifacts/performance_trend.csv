@@ -1,0 +1,2 @@
+timestamp,total_requests,successful_requests,failed_requests,failure_rate,mean_latency_ms,p95_latency_ms,mean_prediction
+2026-11-05T17:05:14.720847,100,100,0,0.0,76.86812701169401,110.84044986637308,2231.7126937435664

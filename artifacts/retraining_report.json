@@ -1,0 +1,28 @@
+{
+  "stage": "12_retrain_model",
+  "status": "SUCCESS",
+  "model": "RandomForestRegressor",
+  "training_rows": 6818,
+  "validation_rows": 1705,
+  "features": 11,
+  "processed_features": 1600,
+  "missing_values_handled": true,
+  "preprocessing": {
+    "numerical_imputation": "median",
+    "categorical_imputation": "most_frequent",
+    "categorical_encoding": "OneHotEncoder(handle_unknown=ignore)"
+  },
+  "parameters": {
+    "n_estimators": 200,
+    "max_depth": 10,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "metrics": {
+    "rmse": 1027.7717450111065,
+    "mae": 718.5056560165959,
+    "r2": 0.6113589429047481
+  },
+  "model_path": "C:\\Users\\neela\\Desktop\\Bigmart sales\\models\\retrained_bigmart_model.pkl",
+  "preprocessor_path": "C:\\Users\\neela\\Desktop\\Bigmart sales\\models\\retrained_bigmart_preprocessor.pkl"
+}

@@ -1,0 +1,15 @@
+{
+  "stage": "12_prediction_drift",
+  "status": "SUCCESS",
+  "records": 500,
+  "prediction_statistics": {
+    "mean": 2176.7130361197906,
+    "std": 1352.9054626001252,
+    "p10": 430.5906244188975,
+    "median": 2049.621100393134,
+    "p90": 3898.370717623873,
+    "min": 58.02273190993343,
+    "max": 6531.380014955478
+  },
+  "prediction_drift_detected": false
+}

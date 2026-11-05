@@ -1,0 +1,9 @@
+{
+  "records_monitored": 5681,
+  "prediction_mean": 2169.8130693353055,
+  "prediction_std": 1344.6226631961442,
+  "prediction_min": 46.708883184871354,
+  "prediction_max": 7122.703625009724,
+  "negative_predictions": 0,
+  "zero_predictions": 0
+}

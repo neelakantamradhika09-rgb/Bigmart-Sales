@@ -1,0 +1,23 @@
+{
+  "stage": "12_update_mlflow_registry",
+  "status": "SUCCESS",
+  "run_id": "08c7349cd9e24ca6b41352d706af806e",
+  "registered_model": "BigMart_Sales_Production_Model",
+  "version": 1,
+  "model_uri": "models:/m-197e25185b23427f8f7ff0d3d7e8fd01",
+  "tracking_uri": "sqlite:///mlflow.db",
+  "experiment_name": "BigMart_Sales_Monitoring",
+  "metrics": {
+    "rmse": 1027.7717450111065,
+    "mae": 718.5056560165959,
+    "r2": 0.6113589429047481
+  },
+  "parameters": {
+    "n_estimators": 200,
+    "max_depth": 10,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "model_path": "C:\\Users\\neela\\Desktop\\Bigmart sales\\models\\retrained_bigmart_model.pkl",
+  "preprocessor_path": "C:\\Users\\neela\\Desktop\\Bigmart sales\\models\\retrained_bigmart_preprocessor.pkl"
+}

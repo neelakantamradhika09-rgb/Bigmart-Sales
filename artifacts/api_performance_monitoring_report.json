@@ -1,0 +1,13 @@
+{
+  "endpoint": "http://localhost:8000/predict",
+  "total_requests": 20,
+  "successful_requests": 20,
+  "failed_requests": 0,
+  "failure_rate": 0.0,
+  "mean_latency_ms": 67.07978502381593,
+  "p95_latency_ms": 115.45979999937117,
+  "throughput_requests_per_second": 14.907620822651133,
+  "prediction_count": 20,
+  "prediction_mean": 4423.99,
+  "status": "PASS"
+}

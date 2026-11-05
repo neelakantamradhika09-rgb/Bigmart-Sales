@@ -1,0 +1,31 @@
+{
+  "stage": "12_data_drift",
+  "status": "SUCCESS",
+  "reference_dataset": "C:\\Users\\neela\\Desktop\\Bigmart sales\\data\\raw\\Train.csv",
+  "current_dataset": "C:\\Users\\neela\\Desktop\\Bigmart sales\\data\\raw\\Test.csv",
+  "features_checked": 4,
+  "drifted_features": 0,
+  "overall_drift_detected": false,
+  "results": [
+    {
+      "feature": "Item_Weight",
+      "psi": 0.006339457284948203,
+      "status": "NO_DRIFT"
+    },
+    {
+      "feature": "Item_Visibility",
+      "psi": 0.004517096827349356,
+      "status": "NO_DRIFT"
+    },
+    {
+      "feature": "Item_MRP",
+      "psi": 0.001961590770302914,
+      "status": "NO_DRIFT"
+    },
+    {
+      "feature": "Outlet_Establishment_Year",
+      "psi": 2.547277405809496e-07,
+      "status": "NO_DRIFT"
+    }
+  ]
+}

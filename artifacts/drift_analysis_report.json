@@ -1,0 +1,7 @@
+{
+  "data_drift": false,
+  "prediction_drift": false,
+  "concept_drift": true,
+  "any_drift_detected": true,
+  "recommended_action": "RETRAIN"
+}

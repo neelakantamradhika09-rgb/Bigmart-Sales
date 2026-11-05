@@ -1,0 +1,23 @@
+{
+  "stage": "12_performance_monitoring",
+  "status": "SUCCESS",
+  "model": "bigmart_model",
+  "total_requests": 100,
+  "successful_requests": 100,
+  "failed_requests": 0,
+  "failure_rate": 0.0,
+  "throughput_predictions_per_second": 13.00929317359156,
+  "latency_ms": {
+    "mean": 76.86812701169401,
+    "median": 69.34495002496988,
+    "p95": 110.84044986637308,
+    "max": 306.3964999746531
+  },
+  "prediction_statistics": {
+    "mean": 2231.7126937435664,
+    "median": 2273.043795876227,
+    "std": 1331.6592776023112,
+    "min": 63.78382445967064,
+    "max": 6523.705840836421
+  }
+}
