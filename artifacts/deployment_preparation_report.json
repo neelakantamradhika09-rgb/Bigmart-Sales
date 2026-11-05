@@ -1,0 +1,79 @@
+{
+  "stage": "11_prepare_deployment",
+  "status": "SUCCESS",
+  "project": "bigmart-sales",
+  "timestamp_utc": "2026-11-05T09:27:13.912646+00:00",
+  "deployment_directory": "deployment",
+  "files": {
+    "model": {
+      "path": "deployment/model.pkl",
+      "exists": true,
+      "size_bytes": 14184369
+    },
+    "encoder": {
+      "path": "deployment/encoder.pkl",
+      "exists": true,
+      "size_bytes": 2178
+    },
+    "metadata": {
+      "path": "deployment/model_metadata.json",
+      "exists": true,
+      "size_bytes": 1689
+    }
+  },
+  "model_metadata": {
+    "project": "bigmart-sales",
+    "model_name": "RandomForest",
+    "model_type": "RandomForestRegressor",
+    "source_model": "artifacts/RandomForest_model.pkl",
+    "deployment_model": "deployment/model.pkl",
+    "source_encoder": "artifacts/encoder.pkl",
+    "deployment_encoder": "deployment/encoder.pkl",
+    "features": {
+      "model": "RandomForestRegressor",
+      "number_of_features": 32,
+      "features": [
+        "Item_Weight",
+        "Item_Visibility",
+        "Item_MRP",
+        "Outlet_Establishment_Year",
+        "Item_Fat_Content_Low Fat",
+        "Item_Fat_Content_Regular",
+        "Item_Type_Baking Goods",
+        "Item_Type_Breads",
+        "Item_Type_Breakfast",
+        "Item_Type_Canned",
+        "Item_Type_Dairy",
+        "Item_Type_Frozen Foods",
+        "Item_Type_Fruits and Vegetables",
+        "Item_Type_Hard Drinks",
+        "Item_Type_Health and Hygiene",
+        "Item_Type_Household",
+        "Item_Type_Meat",
+        "Item_Type_Others",
+        "Item_Type_Seafood",
+        "Item_Type_Snack Foods",
+        "Item_Type_Soft Drinks",
+        "Item_Type_Starchy Foods",
+        "Outlet_Size_High",
+        "Outlet_Size_Medium",
+        "Outlet_Size_Small",
+        "Outlet_Location_Type_Tier 1",
+        "Outlet_Location_Type_Tier 2",
+        "Outlet_Location_Type_Tier 3",
+        "Outlet_Type_Grocery Store",
+        "Outlet_Type_Supermarket Type1",
+        "Outlet_Type_Supermarket Type2",
+        "Outlet_Type_Supermarket Type3"
+      ]
+    },
+    "model_parameters": {
+      "model": "RandomForestRegressor",
+      "n_estimators": 200,
+      "max_depth": 10,
+      "random_state": 42
+    },
+    "deployment_prepared": true,
+    "deployment_prepared_at": "2026-11-05T09:27:13.911598+00:00"
+  }
+}

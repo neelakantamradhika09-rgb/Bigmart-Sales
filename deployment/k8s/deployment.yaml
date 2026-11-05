@@ -20,7 +20,7 @@ spec:
       containers:
         - name: bigmart-sales-api
 
-          image: bigmart-sales-api:lab11
+          image: bigmart-sales:latest
 
           imagePullPolicy: IfNotPresent
 
